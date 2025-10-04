@@ -53,7 +53,7 @@ Interpret.buffer.asYAML = (configSource, encoding = 'utf8') => {
         try {
             return text ? parseYAML(text) : undefined;
         }
-        catch(err) {
+        catch {
             return undefined;
         }
     });
@@ -65,7 +65,7 @@ Interpret.buffer.asStringOrYAML = (configSource, encoding = 'utf8') => {
         try {
             return text ? parseYAML(text) : undefined;
         }
-        catch(err) {
+        catch {
             return text;
         }
     });
@@ -76,7 +76,7 @@ Interpret.string.asYAML = configSource => {
         try {
             return entity.value ? parseYAML(entity.value) : undefined;
         }
-        catch(err) {
+        catch {
             return undefined;
         }
     });
@@ -87,7 +87,7 @@ Interpret.string.asStringOrYAML = configSource => {
         try {
             return entity.value ? parseYAML(entity.value) : undefined;
         }
-        catch(err) {
+        catch {
             return entity.value;
         }
     });
